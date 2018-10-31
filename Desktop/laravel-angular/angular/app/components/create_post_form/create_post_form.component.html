@@ -1,0 +1,53 @@
+<form class="form-t" ng-submit="vm.submit()" >
+  
+    <md-input-container>
+      <label>Topic</label>
+      <input type="text" ng-model="vm.topic">
+     </md-input-container>
+  
+    <md-button type="submit" class="md-primary md-raised">Create Todo </md-button>
+
+
+      
+</form>
+
+
+
+<div class="table-t" ng-init="vm.get_data()">	
+	<ul>		
+		<li ng-repeat="x in vm.assignments"><span class="padding-r">{{$index + 1}}</span> {{x.topic}}</li>		
+	</ul>
+</div>
+
+
+<style type="text/css">
+	
+create-post-form.ng-isolate-scope {
+    margin: 0 auto;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1.m-heading {
+    text-align: center;
+    text-transform: uppercase;
+}
+.table-t {
+    float: left;
+    width: 53%;
+}
+.table-t ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.table-t ul li {
+    padding: 5px 10px;
+}
+.table-t ul li:nth-child(even){background-color:#ccc;}
+.table-t ul li:nth-child(odd){background-color:#ddd;}
+.padding-r {padding-right: 20px;}
+
+</style>
